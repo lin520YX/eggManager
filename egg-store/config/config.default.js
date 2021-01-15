@@ -34,7 +34,21 @@ module.exports = appInfo => {
   }
 // 对中间件传递参数
   config.auth ={
-    title:'1111111'
+    // enable：控制中间件是否开启。
+    //  match：设置只有符合某些规则的请求才会经过这个中间件。
+    //   ignore：设置符合某些规则的请求不经过这个中间件。
+    // enable:false, 
+    // match: '/news',
+    // ignore:'/news',
+    title:'1111111',
+    // 某些路由不经过这个中间件
+    math(ctx){
+      const {url } = ctx.request
+      if(url==='/index'){
+        return true
+      }
+      return false
+    }
   }
 
   return {
