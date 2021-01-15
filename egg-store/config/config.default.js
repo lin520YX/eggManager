@@ -32,7 +32,10 @@ module.exports = appInfo => {
     maxAge:864000,
     renew:true
   }
-
+// 对中间件传递参数
+  config.auth ={
+    title:'1111111'
+  }
 
   return {
     ...config,
