@@ -16,7 +16,7 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1609513199159_3342';
 
   // add your middleware config here
-  config.middleware = ['auth','compress'];
+  config.middleware = ['auth','compress','adminAuth'];
 
   config.view = {
     mapping:{
@@ -50,6 +50,10 @@ module.exports = appInfo => {
       return false
     }
   }
+  // match代表访问路径为/admin 才走adminauth中间件
+  config.adminauth = {
+    match: "/admin"
+ };
 
   return {
     ...config,
