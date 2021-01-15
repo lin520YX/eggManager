@@ -27,8 +27,34 @@ class HomeController extends Controller {
     ctx.cookies.set('key',null)
     ctx.body = 'hi, egg';
   }
+  // session 是另外一种记录客户状态的机制 不同的是cookie保存在客户端浏览器中，而session 保存在服务器上
+
+  // 工作原理当浏览器访问服务器并且发送第一次请求时，服务端会创建一个session对象，生成一个类似
+  // key，value的键值对，然后将key（cookie）返回到客户端返回到客户端，浏览器下次再访问时，携带key，
+  // 找到对应的session（value）
+
+  // egg中session的使用
+  // egg中session基于egg-session内置了对session的操作
+  async settingSession(){
+    const { ctx } = this;
+    ctx.session.userInfo = {
+      name:'lyf'
+    }
+  }
+  async getSession(){
+    const { ctx } = this;
+    ctx.session.userInfo
+  }
+ 
 
 }
 
 module.exports = HomeController;
+ // 默认配置
+//  exports.session = {
+//   key:'EGG_SESS',
+//   maxAge:24*3600*1000,
+//   httpOnly:true,
+//   encrypt:true
+// }
 

@@ -27,6 +27,11 @@ module.exports = appInfo => {
   const userConfig = {
     // myAppName: 'egg',
   };
+  config.session = {
+    key:'SESSION_ID',
+    maxAge:864000,
+    renew:true
+  }
 
 
   return {
