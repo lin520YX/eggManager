@@ -18,6 +18,7 @@ module.exports = appInfo => {
   // add your middleware config here
   config.middleware = ['auth'];
 
+  config.api = 'http://www.phonegap100.com/'
   config.view = {
     mapping:{
       '.html':'ejs'
