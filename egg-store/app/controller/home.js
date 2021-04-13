@@ -43,10 +43,12 @@ class HomeController extends Controller {
     ctx.session.userInfo = {
       name:'lyf'
     }
+    await this.ctx.render('home')
   }
   async getSession(){
     const { ctx } = this;
     ctx.session.userInfo
+    await this.ctx.render('news')
   }
  
 
