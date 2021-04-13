@@ -26,7 +26,8 @@ class HomeController extends Controller {
      // 获取cookies
     
     // 清空cookies 
-    // ctx.cookies.set('key',null)
+    // 设置为null 或者 maxAge 过期时间设置0 或者-1
+    ctx.cookies.set('key',null)
     ctx.body = 'hi, egg';
   }
   // session 是另外一种记录客户状态的机制 不同的是cookie保存在客户端浏览器中，而session 保存在服务器上
