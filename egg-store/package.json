@@ -11,6 +11,7 @@
     "egg-scripts": "^2.11.0",
     "egg-view-ejs": "^2.0.1",
     "koa-compress": "^5.0.1",
+    "koa-jsonp": "^2.0.2",
     "silly-datetime": "^0.1.2"
   },
   "devDependencies": {
