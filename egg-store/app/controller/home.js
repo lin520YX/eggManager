@@ -17,7 +17,9 @@ class HomeController extends Controller {
       signed:false
     })
    
-    await this.ctx.render('home')
+    // await this.ctx.render('home')
+    this.ctx.body = {name:1}
+     await this.ctx.render('home')
   }
   async add() {
     const { ctx } = this;

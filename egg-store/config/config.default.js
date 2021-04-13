@@ -16,7 +16,7 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1609513199159_3342';
 
   // add your middleware config here
-  config.middleware = ['auth','forbidip','jsonp'];
+  config.middleware = ['auth','forbidip','jsonp','compress'];
 
   config.api = 'http://www.phonegap100.com/'
   config.view = {
