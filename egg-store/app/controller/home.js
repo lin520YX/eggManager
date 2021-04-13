@@ -10,16 +10,37 @@ class HomeController extends Controller {
 
     // egg 设置cookies的参数option
 
-    ctx.cookies.set('key','value',{
-      maxAge:24*3600*1000,
-      // httpOnly:true, //仅仅在服务端显示 在客户端中不展示
-      encrypt:true, //cookie 加密
-      signed:false
-    })
+    // ctx.cookies.set('key','value',{
+    //   maxAge:24*3600*1000,
+    //   // httpOnly:true, //仅仅在服务端显示 在客户端中不展示
+    //   encrypt:true, //cookie 加密
+    //   signed:false
+    // })
    
     // await this.ctx.render('home')
     this.ctx.body = {name:1}
-     await this.ctx.render('home')
+    //  await this.ctx.render('home',{
+    //    name:1
+    //  })
+  }
+  async index2() {
+    const { ctx } = this;
+    console.log(this.ctx.request.body)
+    // 设置cookies
+    // ctx.cookies.set('key','value')
+
+    // egg 设置cookies的参数option
+
+    // ctx.cookies.set('key','value',{
+    //   maxAge:24*3600*1000,
+    //   // httpOnly:true, //仅仅在服务端显示 在客户端中不展示
+    //   encrypt:true, //cookie 加密
+    //   signed:false
+    // })
+   
+    // await this.ctx.render('home')
+    // this.ctx.body = {name:1}
+     await this.ctx.render('home2')
   }
   async add() {
     const { ctx } = this;

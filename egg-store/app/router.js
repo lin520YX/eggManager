@@ -13,4 +13,6 @@ module.exports = app => {
   router.post('/add', controller.home.add);
   router.get('/news',controller.news.index);
   router.get('/newsContent',controller.news.newsContent);
+  router.get('/home2',controller.home.index2);
+
 };
